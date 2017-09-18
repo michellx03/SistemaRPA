@@ -1,0 +1,67 @@
+
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li><a href="index.html">Home</a> <i class="fa fa-circle"></i></li>
+		<li><a href="index.html">Ano</a> <i class="fa fa-circle"></i></li>
+		<li><span>Listagem</span></li>
+	</ul>
+
+</div>
+<br>
+<div class="invoice">
+	<div class="row invoice-logo">
+		<div class="col-xs-6 invoice-logo-space">
+			<img
+				src="/AcessoRestrito/resources/assets/pages/media/invoice/walmart.png"
+				class="img-responsive" alt="" />
+		</div>
+		<div class="col-xs-6">
+			<p>
+				Listagem do Ano <span class="muted"> </span>
+			</p>
+		</div>
+	</div>
+	<hr />
+
+	<div class="row">
+		<div class="col-xs-12">
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>Id Ano</th>
+						<th>Ano</th>
+						<!--  class="hidden-xs : use esta classe dentro da th e nao aparecera na impressao-->
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="ano in ListaAno | orderBy:'-anoAno'">
+						<td>{{ano.anoId}}</td>
+						<td>{{ano.anoAno}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-4">
+			<div class="well">
+				<address>
+					<strong>Loop, Inc.</strong> <br /> 795 Park Ave, Suite 120 <br />
+					San Francisco, CA 94107 <br /> <abbr title="Phone">P:</abbr> (234)
+					145-1810
+				</address>
+
+			</div>
+		</div>
+		<div class="col-xs-8 invoice-block">
+
+			<br /> <a class="btn btn-lg blue hidden-print margin-bottom-5"
+				onclick="javascript:window.print();"> Imprimir <i
+				class="fa fa-print"></i>
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+<!-- END CONTENT BODY -->
+</div>
