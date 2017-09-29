@@ -16,6 +16,11 @@ angular
 								controller : UsuarioConsultaController,
 
 							});
+							$routeProvider.when('/StatusConsulta', {
+								templateUrl : 'partials/Status/Consulta.html',
+								controller : StatusConsultaController,
+
+							});
 							$routeProvider.when('/ContaLer', {
 								templateUrl : 'partials/Conta/Ler.html',
 								controller : ContaLerController,
@@ -66,6 +71,11 @@ angular
 							$routeProvider.when('/AnoAlteracao/:id', {
 								templateUrl : 'partials/Ano/Alteracao.html',
 								controller : AnoAlteracaoController,
+
+							});
+							$routeProvider.when('/StatusAlteracao/:id', {
+								templateUrl : 'partials/Status/Alteracao.html',
+								controller : StatusAlteracaoController,
 
 							});
 							$routeProvider.when('/AnoExcluir/:id', {

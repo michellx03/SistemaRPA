@@ -60,6 +60,14 @@
 		class="acessorestrito.angularrestspringsecurity.dao.ano.JpaAnoDao">
 	</bean>
 	
+	<bean id="referenciaDao"
+		class="acessorestrito.angularrestspringsecurity.dao.referencia.JpaReferenciaDao">
+	</bean>
+	
+	<bean id="statusDao"
+		class="acessorestrito.angularrestspringsecurity.dao.status.JpaStatusDao">
+	</bean>
+	
 	<bean id="contaDao"
 		class="acessorestrito.angularrestspringsecurity.dao.conta.JpaContaDao">
 	</bean>
