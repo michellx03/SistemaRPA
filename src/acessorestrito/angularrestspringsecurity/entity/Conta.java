@@ -23,7 +23,7 @@ public class Conta implements Entity {
 	private String contaConvenio;
 
 	@Column(name="conta_data_atendimento")
-	private String contaDataAtendimento;
+	private Integer contaDataAtendimento;
 
 	@Column(name="conta_medico")
 	private String contaMedico;
@@ -59,11 +59,11 @@ public class Conta implements Entity {
 		this.contaConvenio = contaConvenio;
 	}
 
-	public String getContaDataAtendimento() {
+	public Integer getContaDataAtendimento() {
 		return this.contaDataAtendimento;
 	}
 
-	public void setContaDataAtendimento(String contaDataAtendimento) {
+	public void setContaDataAtendimento(Integer contaDataAtendimento) {
 		this.contaDataAtendimento = contaDataAtendimento;
 	}
 

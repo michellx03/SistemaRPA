@@ -16,6 +16,11 @@ angular
 								controller : UsuarioConsultaController,
 
 							});
+							$routeProvider.when('/ContaLer', {
+								templateUrl : 'partials/Conta/Ler.html',
+								controller : ContaLerController,
+
+							});
 							$routeProvider
 									.when(
 											'/UsuarioAlteracao/:id',

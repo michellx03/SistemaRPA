@@ -27,12 +27,12 @@ public class DataBaseInitializer {
 	}
 
 	public void initDataBase() {
-		
+		/*
 		 Usuario user = new Usuario("michell",
 		 this.passwordEncoder.encode("root"));
 		 user.addRole(Role.ADMIN);
 		 user.addRole(Role.CONTROLE_ACESSO);
 		 this.userDao.save(user);
-		
+		*/
 	}
 }
