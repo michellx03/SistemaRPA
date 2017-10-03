@@ -16,6 +16,11 @@ angular
 								controller : UsuarioConsultaController,
 
 							});
+							$routeProvider.when('/ReferenciaConsulta', {
+								templateUrl : 'partials/Referencia/Consulta.html',
+								controller : ReferenciaConsultaController,
+
+							});
 							$routeProvider.when('/StatusConsulta', {
 								templateUrl : 'partials/Status/Consulta.html',
 								controller : StatusConsultaController,
@@ -34,10 +39,22 @@ angular
 												controller : UsuarioAlteracaoController,
 
 											});
+							$routeProvider
+							.when(
+									'/ReferenciaAlteracao/:id',
+									{
+										templateUrl : 'partials/Referencia/Alteracao.html',
+										controller : ReferenciaAlteracaoController,
 
+									});
 							$routeProvider.when('/UsuarioCadastro', {
 								templateUrl : 'partials/Usuario/Cadastro.html',
 								controller : UsuarioCadastroController,
+
+							});
+							$routeProvider.when('/ReferenciaCadastro', {
+								templateUrl : 'partials/Referencia/Cadastro.html',
+								controller : ReferenciaCadastroController,
 
 							});
 							$routeProvider

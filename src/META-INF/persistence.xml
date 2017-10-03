@@ -6,7 +6,7 @@
 		<mapping-file>META-INF/orm.xml</mapping-file>
 		<class>acessorestrito.angularrestspringsecurity.entity.Auditoria</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Conta</class>
-		<class>acessorestrito.angularrestspringsecurity.entity.Referencia</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Status</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.Referencia</class>
 	</persistence-unit>
 </persistence>

@@ -19,6 +19,9 @@ public class Referencia implements Entity {
 	@GeneratedValue
 	private Integer refeId;
 
+	@Column(name="refe_ano")
+	private Integer refeAno;
+
 	@Column(name="refe_referencia")
 	private String refeReferencia;
 
@@ -34,6 +37,14 @@ public class Referencia implements Entity {
 
 	public void setRefeId(Integer refeId) {
 		this.refeId = refeId;
+	}
+
+	public Integer getRefeAno() {
+		return this.refeAno;
+	}
+
+	public void setRefeAno(Integer refeAno) {
+		this.refeAno = refeAno;
 	}
 
 	public String getRefeReferencia() {
