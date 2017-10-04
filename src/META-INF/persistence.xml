@@ -8,5 +8,7 @@
 		<class>acessorestrito.angularrestspringsecurity.entity.Conta</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Status</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Referencia</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.ContaFaturamento</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.ContaDemonstrativo</class>
 	</persistence-unit>
 </persistence>

@@ -72,6 +72,14 @@
 		class="acessorestrito.angularrestspringsecurity.dao.conta.JpaContaDao">
 	</bean>
 	
+	<bean id="contaFaturamentoDao"
+		class="acessorestrito.angularrestspringsecurity.dao.conta_faturamento.JpaContaFaturamentoDao">
+	</bean>
+	
+	<bean id="contaDemonstrativoDao"
+		class="acessorestrito.angularrestspringsecurity.dao.conta_demonstrativo.JpaContaDemonstrativoDao">
+	</bean>
+	
 	<bean id="AuditoriaDao"
 		class="acessorestrito.angularrestspringsecurity.dao.auditoria.JpaAuditoriaDao">
 	</bean>

@@ -28,5 +28,7 @@
 	<classpathentry kind="lib" path="C:/Users/Michell/Documents/poi-ooxml-schemas-3.10.1-20140818.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Michell/Documents/stax-api-1.0.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Michell/Documents/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michell/Documents/postgresql-9.4.1208-jdbc42-atlassian-hosted (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/Michell/Documents/postgresql-42.1.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
