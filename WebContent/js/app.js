@@ -16,6 +16,16 @@ angular
 								controller : UsuarioConsultaController,
 
 							});
+							$routeProvider.when('/ContaAtendimentoConsulta', {
+								templateUrl : 'partials/ContaAtendimento/Consulta.html',
+								controller : ContaAtendimentoConsultaController,
+
+							});
+							$routeProvider.when('/ContaAlteracao/:id', {
+								templateUrl : 'partials/ContaAtendimento/Alteracao.html',
+								controller : ContaAtendimentoAlteracaoController,
+
+							});
 							$routeProvider.when('/ReferenciaConsulta', {
 								templateUrl : 'partials/Referencia/Consulta.html',
 								controller : ReferenciaConsultaController,
@@ -24,6 +34,16 @@ angular
 							$routeProvider.when('/StatusConsulta', {
 								templateUrl : 'partials/Status/Consulta.html',
 								controller : StatusConsultaController,
+
+							});
+							$routeProvider.when('/StatusPagamentoConsulta', {
+								templateUrl : 'partials/StatusPagamento/Consulta.html',
+								controller : StatusPagamentoConsultaController,
+
+							});
+							$routeProvider.when('/StatusRecebimentoConsulta', {
+								templateUrl : 'partials/StatusRecebimento/Consulta.html',
+								controller : StatusRecebimentoConsultaController,
 
 							});
 							$routeProvider.when('/ContaLer', {
@@ -93,6 +113,16 @@ angular
 							$routeProvider.when('/StatusAlteracao/:id', {
 								templateUrl : 'partials/Status/Alteracao.html',
 								controller : StatusAlteracaoController,
+
+							});
+							$routeProvider.when('/StatusPagamentoAlteracao/:id', {
+								templateUrl : 'partials/StatusPagamento/Alteracao.html',
+								controller : StatusPagamentoAlteracaoController,
+
+							});
+							$routeProvider.when('/StatusRecebimentoAlteracao/:id', {
+								templateUrl : 'partials/StatusRecebimento/Alteracao.html',
+								controller : StatusRecebimentoAlteracaoController,
 
 							});
 							$routeProvider.when('/AnoExcluir/:id', {

@@ -9,8 +9,8 @@ import javax.persistence.*;
  * 
  */
 @javax.persistence.Entity
+@Table(name="conta", schema = "sistema")
 @NamedQuery(name="Conta.findAll", query="SELECT c FROM Conta c")
-@Table (name = "conta", schema = "sistema")
 public class Conta implements Entity {
 	private static final long serialVersionUID = 1L;
 
@@ -29,13 +29,16 @@ public class Conta implements Entity {
 	private String contaMedico;
 
 	@Column(name="conta_numero_guia")
-	private Integer contaNumeroGuia;
+	private double contaNumeroGuia;
 
 	@Column(name="conta_paciente")
 	private String contaPaciente;
 
 	@Column(name="conta_refe_id")
 	private Integer contaRefeId;
+
+	@Column(name="conta_stre_id")
+	private Integer contaStreId;
 
 	@Column(name="conta_tipo_atendimento")
 	private String contaTipoAtendimento;
@@ -75,11 +78,11 @@ public class Conta implements Entity {
 		this.contaMedico = contaMedico;
 	}
 
-	public Integer getContaNumeroGuia() {
+	public double getContaNumeroGuia() {
 		return this.contaNumeroGuia;
 	}
 
-	public void setContaNumeroGuia(Integer contaNumeroGuia) {
+	public void setContaNumeroGuia(double contaNumeroGuia) {
 		this.contaNumeroGuia = contaNumeroGuia;
 	}
 
@@ -97,6 +100,14 @@ public class Conta implements Entity {
 
 	public void setContaRefeId(Integer contaRefeId) {
 		this.contaRefeId = contaRefeId;
+	}
+
+	public Integer getContaStreId() {
+		return this.contaStreId;
+	}
+
+	public void setContaStreId(Integer contaStreId) {
+		this.contaStreId = contaStreId;
 	}
 
 	public String getContaTipoAtendimento() {

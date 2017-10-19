@@ -5,10 +5,12 @@
 	<persistence-unit name="examplePU" transaction-type="RESOURCE_LOCAL">
 		<mapping-file>META-INF/orm.xml</mapping-file>
 		<class>acessorestrito.angularrestspringsecurity.entity.Auditoria</class>
-		<class>acessorestrito.angularrestspringsecurity.entity.Conta</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Status</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Referencia</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.ContaFaturamento</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.ContaDemonstrativo</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.StatusPagamento</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.StatusRecebimento</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.Conta</class>
 	</persistence-unit>
 </persistence>
