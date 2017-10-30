@@ -18,6 +18,8 @@ import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -210,7 +212,7 @@ public class ContaResource {
 	@POST
 	@Path("lerArquivo")
 	@Produces(MediaType.APPLICATION_JSON)
-	public void lerExcel() throws IOException {
+	public void lerExcel(@QueryParam("referencia") Integer referencia) throws IOException {
 		
 		 List<Conta> listaContas = new ArrayList<Conta>();
 		   
@@ -254,7 +256,7 @@ public class ContaResource {
                               }
                               
                        }
-                       conta.setContaRefeId(1);
+                       conta.setContaRefeId(referencia);
                        conta.setContaStreId(2);
                        contaDaoInterface.save(conta);
                 }

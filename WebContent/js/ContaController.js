@@ -1,11 +1,22 @@
 function ContaLerController($scope, $location, $http) {
+	$scope.Referencia = {};
+	
+	$http({
+		method : "GET",
+		url : '/AcessoRestrito/rest/referencia',
+	}).success(function(data) {
+		$scope.Referencia = data;
+		
+	});
 	
 	$scope.ler = function() {
+		
+		var referencia = $("#referencia option:selected").val();
 	
 		$http(
 			{
 				method : "POST",
-				url : '/AcessoRestrito/rest/conta/lerArquivo',
+				url : '/AcessoRestrito/rest/conta/lerArquivo?referencia='+ referencia +'',
 			}).success(function(data) {
 				$location.path("/ContaLer");
 				$('#showToastSucesso').click();
