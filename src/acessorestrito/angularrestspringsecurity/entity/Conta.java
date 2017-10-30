@@ -2,6 +2,7 @@ package acessorestrito.angularrestspringsecurity.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.Date;
 
 
 /**
@@ -9,8 +10,8 @@ import javax.persistence.*;
  * 
  */
 @javax.persistence.Entity
-@Table(name="conta", schema = "sistema")
 @NamedQuery(name="Conta.findAll", query="SELECT c FROM Conta c")
+@Table (name = "conta", schema = "sistema")
 public class Conta implements Entity {
 	private static final long serialVersionUID = 1L;
 
@@ -22,8 +23,9 @@ public class Conta implements Entity {
 	@Column(name="conta_convenio")
 	private String contaConvenio;
 
+	@Temporal(TemporalType.DATE)
 	@Column(name="conta_data_atendimento")
-	private Integer contaDataAtendimento;
+	private Date contaDataAtendimento;
 
 	@Column(name="conta_medico")
 	private String contaMedico;
@@ -62,11 +64,11 @@ public class Conta implements Entity {
 		this.contaConvenio = contaConvenio;
 	}
 
-	public Integer getContaDataAtendimento() {
+	public Date getContaDataAtendimento() {
 		return this.contaDataAtendimento;
 	}
 
-	public void setContaDataAtendimento(Integer contaDataAtendimento) {
+	public void setContaDataAtendimento(Date contaDataAtendimento) {
 		this.contaDataAtendimento = contaDataAtendimento;
 	}
 
