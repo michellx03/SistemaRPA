@@ -8,9 +8,10 @@
 		<class>acessorestrito.angularrestspringsecurity.entity.Status</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Referencia</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.ContaFaturamento</class>
-		<class>acessorestrito.angularrestspringsecurity.entity.ContaDemonstrativo</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.StatusPagamento</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.StatusRecebimento</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Conta</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.ContaDemonstrativo</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.ProcedimentosIpasgo</class>
 	</persistence-unit>
 </persistence>

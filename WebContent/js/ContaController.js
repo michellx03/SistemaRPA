@@ -36,6 +36,18 @@ function ContaLerController($scope, $location, $http) {
 			});
 	};	
 	
+	$scope.lerProcedimentosIpasgo = function() {
+		
+		$http(
+			{
+				method : "POST",
+				url : '/AcessoRestrito/rest/procedimento_ipasgo/lerProcedimentosIpasgo',
+			}).success(function(data) {
+				$location.path("/LerDemonstrativos");
+				$('#showToastSucesso').click();
+			});
+	};
+	
 	$scope.lerDemonstrativo = function() {
 	
 		$http(

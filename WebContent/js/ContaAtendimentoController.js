@@ -46,7 +46,7 @@ function ContaAtendimentoConsultaController($scope, $http) {
 };
 
 
-function ContaAtendimentoAlteracaoController($scope, $http, $routeParams) {
+function ContaAtendimentoAlteracaoController($scope, $http, $routeParams, $location) {
 	$scope.Conta;
 	$scope.Status = {};
 	$scope.Referencia = {};

@@ -165,12 +165,6 @@
 
 					</a></li>
 
-					<li class="nav-item start  open"><a href="#!/ContaLer"
-						class="nav-link nav-toggle"> <i class="fa fa-level-up"></i> <span
-							class="title">Importacao</span> <span></span>
-
-					</a></li>
-
 					<li class="nav-item start  open"><a
 						href="#!/ContaAtendimentoConsulta" class="nav-link nav-toggle">
 							<i class="fa fa-plus"></i> <span class="title">Atendimento</span>
@@ -182,16 +176,59 @@
 							<span class="title">Faturamento</span> <span></span>
 
 					</a></li>
-					<li class="nav-item start  open"><a href="#"
-						class="nav-link nav-toggle"> <i class="fa fa-file-code-o"></i>
-							<span class="title">Demosntrativo</span> <span></span>
-
-					</a></li>
 					<li ng-show="hasRole('ROLE_USER')" class="nav-item start  open"><a
 						href="javascript:;" class="nav-link nav-toggle"> <i
 							class="icon-home"></i> <span class="title">Area User</span> <span"></span>
 
 					</a></li>
+
+					<li class="nav-item  "><a href="javascript:;"
+						class="nav-link nav-toggle"> <i class="fa fa-file-code-o"></i>
+							<span class="title">Demonstrativos</span> <span class="arrow"></span>
+					</a>
+						<ul class="sub-menu">
+
+							<li class="nav-item start  open"><a href="#!/ContaDemonstrativoConsulta"
+						class="nav-link nav-toggle"> <i class=""></i>
+							<span class="title">Demonstrativo Ipasgo</span> <span></span>
+
+					</a></li>
+
+						</ul></li>
+						
+						<li class="nav-item  "><a href="javascript:;"
+						class="nav-link nav-toggle"> <i class="fa fa-level-up"></i>
+							<span class="title">Importacao</span> <span class="arrow"></span>
+					</a>
+						<ul class="sub-menu">
+
+							<li class="nav-item start  open"><a href="#!/ContaLer"
+						class="nav-link nav-toggle"> <i class=""></i> <span
+							class="title">Importacao arquivos</span> <span></span>
+
+					</a></li>
+					
+					<li class="nav-item start  open"><a href="#!/LerDemonstrativos"
+						class="nav-link nav-toggle"> <i class=""></i> <span
+							class="title">Importacao procedimentos</span> <span></span>
+
+					</a></li>
+
+						</ul></li>
+
+					<li class="nav-item  "><a href="javascript:;"
+						class="nav-link nav-toggle"> <i class="fa fa-plus-square"></i>
+							<span class="title">Procedimentos</span> <span class="arrow"></span>
+					</a>
+						<ul class="sub-menu">
+
+							<li class="nav-item start  open"><a href="#!/ProcedimentosIpasgo"
+								class="nav-link nav-toggle"> <i class=""></i>
+									<span class="title">Procedimentos Ipasgo</span> <span></span>
+
+							</a></li>
+
+						</ul></li>
 
 
 					<li class="nav-item  "><a href="javascript:;"
@@ -232,6 +269,7 @@
 							</a></li>
 
 						</ul></li>
+						
 
 
 
@@ -284,8 +322,8 @@
 
 		<div class="page-footer">
 			<div class="page-footer-inner">
-				2017 &copy; Contato <a target="_blank" href="">01fernando.ti@gmail.com</a>
-				&nbsp;|&nbsp; <a href="https://github.com/FernandoUnix"
+				2017 &copy; Contato <a target="_blank" href="">michellx03@gmail.com</a>
+				&nbsp;|&nbsp; <a href="https://github.com/michellx03"
 					target="_blank"
 					title="Purchase Metronic just for 27$ and get lifetime updates for free"
 					target="_blank">GitHub</a>
@@ -495,6 +533,8 @@
 		type="text/javascript"></script>
 	<script src="/AcessoRestrito/js/ContaAtendimentoController.js"
 		type="text/javascript"></script>
+	<script src="/AcessoRestrito/js/ContaDemonstrativoController.js"
+		type="text/javascript"></script>	
 	<script src="/AcessoRestrito/js/StatusController.js"
 		type="text/javascript"></script>
 	<script src="/AcessoRestrito/js/StatusPagamentoController.js"
@@ -505,7 +545,8 @@
 		type="text/javascript"></script>
 	<script src="/AcessoRestrito/js/AnoController.js"
 		type="text/javascript"></script>
-
+	<script src="/AcessoRestrito/js/ProcedimentoIpasgoController.js"
+		type="text/javascript"></script>
 	<script src="/AcessoRestrito/js/ControleAcesso.js"
 		type="text/javascript"></script>
 

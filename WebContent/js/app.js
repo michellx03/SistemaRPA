@@ -21,9 +21,24 @@ angular
 								controller : ContaAtendimentoConsultaController,
 
 							});
+							$routeProvider.when('/ProcedimentosIpasgo', {
+								templateUrl : 'partials/ProcedimentosIpasgo/Consulta.html',
+								controller : ProcedimentosIpasgoConsultaController,
+
+							});
+							$routeProvider.when('/ContaDemonstrativoConsulta', {
+								templateUrl : 'partials/ContaDemonstrativo/Consulta.html',
+								controller : ContaDemonstrativoConsultaController,
+
+							});
 							$routeProvider.when('/ContaAlteracao/:id', {
 								templateUrl : 'partials/ContaAtendimento/Alteracao.html',
 								controller : ContaAtendimentoAlteracaoController,
+
+							});
+							$routeProvider.when('/ContaDemonstrativoAlteracao/:id', {
+								templateUrl : 'partials/ContaDemonstrativo/Alteracao.html',
+								controller : ContaDemonstrativoAlteracaoController,
 
 							});
 							$routeProvider.when('/ReferenciaConsulta', {
@@ -48,6 +63,11 @@ angular
 							});
 							$routeProvider.when('/ContaLer', {
 								templateUrl : 'partials/Conta/Ler.html',
+								controller : ContaLerController,
+
+							});
+							$routeProvider.when('/LerDemonstrativos', {
+								templateUrl : 'partials/Conta/LerProcedimentos.html',
 								controller : ContaLerController,
 
 							});

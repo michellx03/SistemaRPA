@@ -72,6 +72,10 @@
 		class="acessorestrito.angularrestspringsecurity.dao.status_pagamento.JpaStatusPagamentoDao">
 	</bean>
 	
+	<bean id="procedimentosIpasgoDao"
+		class="acessorestrito.angularrestspringsecurity.dao.procedimentos_ipasgo.JpaProcedimentosIpasgoDao">
+	</bean>
+	
 	<bean id="statusRecebimentoDao"
 		class="acessorestrito.angularrestspringsecurity.dao.status_recebimento.JpaStatusRecebimentoDao">
 	</bean>
