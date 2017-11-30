@@ -150,6 +150,11 @@ angular
 								controller : AnoExcluirController,
 
 							});
+							$routeProvider.when('/ProcedimentoExcluir/:id', {
+								template : '<div></div>',
+								controller : ProcedimentoExcluirController,
+
+							});
 							
 							$routeProvider.when('/AnoRelatorioFiltro', {
 								templateUrl : 'partials/Ano/RelatorioFiltro.html',

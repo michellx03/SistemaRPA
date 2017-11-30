@@ -10,6 +10,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -119,6 +121,15 @@ public class ProcedimentoIpasgoResource {
          }
 
    }
+	
+	@DELETE
+	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void Deletar(@QueryParam("id") Integer id) {
+
+		procedimentosIpasgoDaoInterface.delete(id);
+
+	}
 
 }	
 

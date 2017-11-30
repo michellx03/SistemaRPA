@@ -122,20 +122,27 @@ public class ContaDemonstrativoResource {
              			
                        	Query query = entityManager.createNativeQuery(select);
                 		List<Object[]> list = query.getResultList();
+                		
+                		System.out.println("Codigo: "+conta.getCodeCodigo());
+                		System.out.println("ListSelect: "+ list);
              	
              			for (Object resolucao: list) {
              			   
              			  if(conta.getCodeCodigo().equals(resolucao)){
+             				  
+             				 System.out.println("IF: "+conta.getCodeCodigo().equals(resolucao));
+             				 System.out.println("CodigoFor: "+conta.getCodeCodigo());
+             				 System.out.println("ResolucaoFor: "+resolucao);
              				  
              				String idSelect = "SELECT prip_id FROM sistema.procedimentos_ipasgo WHERE prip_codigo="+resolucao;
                   			
              				Query queryId = entityManager.createNativeQuery(idSelect);
              				Object id = queryId.getSingleResult();
              				
+             				System.out.println("ID: "+id);
+             				
                      		conta.setCodePripCodigo((Integer) id);
              				 
-                           }else{
-                        	   conta.setCodePripCodigo(1);
                            }
              			}
                	 	 	
