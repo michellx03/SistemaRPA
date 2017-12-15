@@ -19,13 +19,13 @@
 				<label class="control-label visible-ie8 visible-ie9">Email</label> <input
 					class="form-control form-control-solid placeholder-no-fix"
 					type="text" autocomplete="off" id="username" ng-model="username"
-					placeholder="Email" name="username" />
+					placeholder="Email" name="username" ng-keypress="($event.charCode==13)? login() : return" />
 			</div>
 			<div class="form-group">
 				<label class="control-label visible-ie8 visible-ie9">Senha</label> <input
 					class="form-control form-control-solid placeholder-no-fix"
 					type="password" id="password" ng-model="password"
-					autocomplete="off" placeholder="Senha" name="password" />
+					autocomplete="off" placeholder="Senha" name="password" ng-keypress="($event.charCode==13)? login() : return" />
 			</div>
 			<div class="form-actions" style="border-bottom: 1px solid #fff;">
 				<input type="submit" ng-click="login()" value="Entrar"

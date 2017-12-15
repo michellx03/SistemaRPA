@@ -60,6 +60,14 @@
 		class="acessorestrito.angularrestspringsecurity.dao.ano.JpaAnoDao">
 	</bean>
 	
+	<bean id="medicosDao"
+		class="acessorestrito.angularrestspringsecurity.dao.medicos.JpaMedicosDao">
+	</bean>
+	
+	<bean id="descontosDao"
+		class="acessorestrito.angularrestspringsecurity.dao.descontos.JpaDescontosDao">
+	</bean>
+	
 	<bean id="referenciaDao"
 		class="acessorestrito.angularrestspringsecurity.dao.referencia.JpaReferenciaDao">
 	</bean>

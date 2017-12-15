@@ -16,6 +16,16 @@ angular
 								controller : UsuarioConsultaController,
 
 							});
+							$routeProvider.when('/MedicosConsulta', {
+								templateUrl : 'partials/Medicos/Consulta.html',
+								controller : MedicosConsultaController,
+
+							});
+							$routeProvider.when('/DescontosConsulta', {
+								templateUrl : 'partials/Descontos/Consulta.html',
+								controller : DescontosConsultaController,
+
+							});
 							$routeProvider.when('/ContaAtendimentoConsulta', {
 								templateUrl : 'partials/ContaAtendimento/Consulta.html',
 								controller : ContaAtendimentoConsultaController,
@@ -34,6 +44,11 @@ angular
 							$routeProvider.when('/ContaAlteracao/:id', {
 								templateUrl : 'partials/ContaAtendimento/Alteracao.html',
 								controller : ContaAtendimentoAlteracaoController,
+
+							});
+							$routeProvider.when('/MedicosAlteracao/:id', {
+								templateUrl : 'partials/Medicos/Alteracao.html',
+								controller : MedicoAlteracaoController,
 
 							});
 							$routeProvider.when('/ContaDemonstrativoAlteracao/:id', {
@@ -97,6 +112,11 @@ angular
 								controller : ReferenciaCadastroController,
 
 							});
+							$routeProvider.when('/MedicosCadastro', {
+								templateUrl : 'partials/Medicos/Cadastro.html',
+								controller : MedicosCadastroController,
+
+							});
 							$routeProvider
 									.when(
 											'/ControleAcessoConsulta',
@@ -115,6 +135,11 @@ angular
 								controller : AnoCadastroController,
 
 							});
+							$routeProvider.when('/DescontosCadastro', {
+								templateUrl : 'partials/Descontos/Cadastro.html',
+								controller : descontosCadastroController,
+
+							});
 							$routeProvider.when('/AnoVisualizar/:id', {
 								templateUrl : 'partials/Ano/Visualizar.html',
 								controller : AnoVisualizarController,
@@ -128,6 +153,11 @@ angular
 							$routeProvider.when('/AnoAlteracao/:id', {
 								templateUrl : 'partials/Ano/Alteracao.html',
 								controller : AnoAlteracaoController,
+
+							});
+							$routeProvider.when('/DescontosAlteracao/:id', {
+								templateUrl : 'partials/Descontos/Alteracao.html',
+								controller : DescontosAlteracaoController,
 
 							});
 							$routeProvider.when('/StatusAlteracao/:id', {
@@ -148,6 +178,16 @@ angular
 							$routeProvider.when('/AnoExcluir/:id', {
 								template : '<div></div>',
 								controller : AnoExcluirController,
+
+							});
+							$routeProvider.when('/MedicosExcluir/:id', {
+								template : '<div></div>',
+								controller : MedicosExcluirController,
+
+							});
+							$routeProvider.when('/DescontosExcluir/:id', {
+								template : '<div></div>',
+								controller : DescontosExcluirController,
 
 							});
 							$routeProvider.when('/ProcedimentoExcluir/:id', {

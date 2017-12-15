@@ -1,0 +1,135 @@
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li><a href="#!/Dashboard">Home</a> <i class="fa fa-circle"></i></li>
+		<li><a href="#!/MedicosConsulta">Medicos</a> <i class="fa fa-circle"></i></li>
+		<li><span>Consulta</span></li>
+	</ul>
+
+
+</div>
+<h1 class="page-title">
+	Cadastro de Medicos <small>Campos Obrigatórios(*)</small>
+</h1>
+
+
+<div class="row">
+	<div class="col-md-12">
+
+		<div class="portlet light portlet-fit portlet-form bordered">
+
+
+			<div class="portlet-body">
+
+				<form id="form_sample_2" class="form-horizontal">
+					<div class="form-body">
+						<div class="alert alert-danger display-hide">
+							<button class="close" data-close="alert"></button>
+							Erro. Por favor verifique abaixo!.
+						</div>
+						<div class="form-group">
+							<label class="control-label col-md-3">Medico <span
+								class="required"> * </span>
+							</label>
+							<div class="col-md-4">
+								<div class="input-icon right">
+									<i class="fa"></i> <input ng-model="medico" id="medico"
+										type="text" class="form-control" name="name" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-md-3">CRM <span
+								class="required"> * </span>
+							</label>
+							<div class="col-md-4">
+								<div class="input-icon right">
+									<i class="fa"></i> <input ng-model="crm" id="crm"
+										type="number" class="form-control" name="name" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-md-3">Especialidade <span
+								class="required"> * </span>
+							</label>
+							<div class="col-md-4">
+								<div class="input-icon right">
+									<i class="fa"></i> <input ng-model="especialidade" id="especialidade"
+										type="text" class="form-control" name="name" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label col-md-3">CPF <span
+								class="required"> * </span>
+							</label>
+							<div class="col-md-4">
+								<div class="input-icon right">
+									<i class="fa"></i> <input ng-model="cpf" id="cpf"
+										type="text" class="form-control" name="name" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="portlet-body">
+
+							<div class="form-group">
+								<label for="single" class="control-label col-md-3">Selecione
+									o desconto<span class="required"> * </span>
+								</label>
+								<div class="col-md-4">
+									<select id="single" class="form-control select2"
+										style="width: 307px">
+										<option value="">Selecione o desconto</option>
+
+										<option
+											ng-repeat="descontos in Descontos | orderBy:'descConvenio'"
+											ng-if="Medicos.mediId != descontos.descId "
+											value="{{descontos.descId}}">{{descontos.descConvenio}}</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+					
+					<div class="form-actions">
+						<div class="row">
+							<div class="col-md-offset-3 col-md-9">
+								<button ng-click="Cadastrar()" type="submit" class="btn green">Cadastrar</button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script
+	src="/AcessoRestrito/resources/assets/pages/scripts/form-validation.min.js"
+	type="text/javascript"></script>
+
+
+<script
+	src="/AcessoRestrito/resources/assets/global/plugins/jquery-validation/js/jquery.validate.min.js"
+	type="text/javascript"></script>
+<script
+	src="/AcessoRestrito/resources/assets/global/plugins/jquery-validation/js/additional-methods.min.js"></script>
+<script
+	src="/AcessoRestrito/resources/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"
+	type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
