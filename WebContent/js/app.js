@@ -31,6 +31,11 @@ angular
 								controller : ContaAtendimentoConsultaController,
 
 							});
+							$routeProvider.when('/ContaFaturamentoConsulta', {
+								templateUrl : 'partials/ContaFaturamento/Consulta.html',
+								controller : ContaFaturamentoConsultaController,
+
+							});
 							$routeProvider.when('/ProcedimentosIpasgo', {
 								templateUrl : 'partials/ProcedimentosIpasgo/Consulta.html',
 								controller : ProcedimentosIpasgoConsultaController,
@@ -44,6 +49,11 @@ angular
 							$routeProvider.when('/ContaAlteracao/:id', {
 								templateUrl : 'partials/ContaAtendimento/Alteracao.html',
 								controller : ContaAtendimentoAlteracaoController,
+
+							});
+							$routeProvider.when('/ContaFaturmanetoAlteracao/:id', {
+								templateUrl : 'partials/ContaFaturamento/Alteracao.html',
+								controller : ContaFaturamentoAlteracaoController,
 
 							});
 							$routeProvider.when('/MedicosAlteracao/:id', {

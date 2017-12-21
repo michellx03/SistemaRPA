@@ -7,7 +7,6 @@
 		<class>acessorestrito.angularrestspringsecurity.entity.Auditoria</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Status</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Referencia</class>
-		<class>acessorestrito.angularrestspringsecurity.entity.ContaFaturamento</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.StatusPagamento</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.StatusRecebimento</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Conta</class>
@@ -15,5 +14,6 @@
 		<class>acessorestrito.angularrestspringsecurity.entity.ProcedimentosIpasgo</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Medico</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Desconto</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.ContaFaturamento</class>
 	</persistence-unit>
 </persistence>

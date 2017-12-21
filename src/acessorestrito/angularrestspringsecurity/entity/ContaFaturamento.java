@@ -2,6 +2,7 @@ package acessorestrito.angularrestspringsecurity.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.Date;
 
 
 /**
@@ -19,14 +20,15 @@ public class ContaFaturamento implements Entity {
 	@GeneratedValue
 	private Integer cofaId;
 
-	@Column(name="cofa_convenio")
-	private String cofaConvenio;
-
+	@Temporal(TemporalType.DATE)
 	@Column(name="cofa_data_atendimento")
-	private Integer cofaDataAtendimento;
+	private Date cofaDataAtendimento;
+
+	@Column(name="cofa_matriculla")
+	private Integer cofaMatriculla;
 
 	@Column(name="cofa_medico")
-	private String cofaMedico;
+	private Integer cofaMedico;
 
 	@Column(name="cofa_numero_guia")
 	private Integer cofaNumeroGuia;
@@ -40,6 +42,9 @@ public class ContaFaturamento implements Entity {
 	@Column(name="cofa_tipo_atendimento")
 	private String cofaTipoAtendimento;
 
+	@Column(name="cofa_valor")
+	private double cofaValor;
+
 	public ContaFaturamento() {
 	}
 
@@ -51,27 +56,27 @@ public class ContaFaturamento implements Entity {
 		this.cofaId = cofaId;
 	}
 
-	public String getCofaConvenio() {
-		return this.cofaConvenio;
-	}
-
-	public void setCofaConvenio(String cofaConvenio) {
-		this.cofaConvenio = cofaConvenio;
-	}
-
-	public Integer getCofaDataAtendimento() {
+	public Date getCofaDataAtendimento() {
 		return this.cofaDataAtendimento;
 	}
 
-	public void setCofaDataAtendimento(Integer cofaDataAtendimento) {
+	public void setCofaDataAtendimento(Date cofaDataAtendimento) {
 		this.cofaDataAtendimento = cofaDataAtendimento;
 	}
 
-	public String getCofaMedico() {
+	public Integer getCofaMatriculla() {
+		return this.cofaMatriculla;
+	}
+
+	public void setCofaMatriculla(Integer cofaMatriculla) {
+		this.cofaMatriculla = cofaMatriculla;
+	}
+
+	public Integer getCofaMedico() {
 		return this.cofaMedico;
 	}
 
-	public void setCofaMedico(String cofaMedico) {
+	public void setCofaMedico(Integer cofaMedico) {
 		this.cofaMedico = cofaMedico;
 	}
 
@@ -105,6 +110,14 @@ public class ContaFaturamento implements Entity {
 
 	public void setCofaTipoAtendimento(String cofaTipoAtendimento) {
 		this.cofaTipoAtendimento = cofaTipoAtendimento;
+	}
+
+	public double getCofaValor() {
+		return this.cofaValor;
+	}
+
+	public void setCofaValor(double cofaValor) {
+		this.cofaValor = cofaValor;
 	}
 
 }
