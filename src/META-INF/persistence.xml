@@ -12,8 +12,9 @@
 		<class>acessorestrito.angularrestspringsecurity.entity.Conta</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.ContaDemonstrativo</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.ProcedimentosIpasgo</class>
-		<class>acessorestrito.angularrestspringsecurity.entity.Medico</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.Desconto</class>
 		<class>acessorestrito.angularrestspringsecurity.entity.ContaFaturamento</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.Medico</class>
+		<class>acessorestrito.angularrestspringsecurity.entity.Convenio</class>
 	</persistence-unit>
 </persistence>

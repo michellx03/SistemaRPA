@@ -79,8 +79,7 @@ public class MedicosResource {
 	@Path("/obterDados")
 	public selectMedicos obterDados(@QueryParam("id") Integer id) {
 		
-		String select = "SELECT medi_id, medi_cpf, medi_crm, medi_desc_id, medi_especialidade, medi_nome, desc_id, desc_convenio, desc_valor FROM sistema.medicos "
-				+ "INNER JOIN sistema.descontos ON medi_desc_id = desc_id "
+		String select = "SELECT medi_id, medi_cpf, medi_crm, medi_especialidade, medi_nome FROM sistema.medicos "
 				+ "WHERE medi_id =" + id + "";
 		
 		Query query = entityManager.createNativeQuery(select);
@@ -93,12 +92,8 @@ public class MedicosResource {
 			descontos.setMediId(Integer.parseInt(obj[0].toString()));
 			descontos.setMediCpf(obj[1].toString());
 			descontos.setMediCrm(Integer.parseInt(obj[2].toString()));
-			descontos.setMediDescId(Integer.parseInt(obj[3].toString()));
-			descontos.setMediEspecialidade(obj[4].toString());
-			descontos.setMediNome(obj[5].toString());
-			descontos.setDescId(Integer.parseInt(obj[6].toString()));
-			descontos.setDescConvenio(obj[7].toString());
-			descontos.setDescValor(Integer.parseInt(obj[8].toString()));
+			descontos.setMediEspecialidade(obj[3].toString());
+			descontos.setMediNome(obj[4].toString());
 				
 		}
 
@@ -111,12 +106,8 @@ class selectMedicos {
 	private Integer mediId;
 	private String mediCpf;
 	private Integer mediCrm;
-	private Integer mediDescId;
 	private String mediEspecialidade;
 	private String mediNome;
-	private Integer descId;
-	private String descConvenio;
-	private Integer descValor;
 	
 	public Integer getMediId() {
 		return mediId;
@@ -136,12 +127,6 @@ class selectMedicos {
 	public void setMediCrm(Integer mediCrm) {
 		this.mediCrm = mediCrm;
 	}
-	public Integer getMediDescId() {
-		return mediDescId;
-	}
-	public void setMediDescId(Integer mediDescId) {
-		this.mediDescId = mediDescId;
-	}
 	public String getMediEspecialidade() {
 		return mediEspecialidade;
 	}
@@ -153,23 +138,5 @@ class selectMedicos {
 	}
 	public void setMediNome(String mediNome) {
 		this.mediNome = mediNome;
-	}
-	public Integer getDescId() {
-		return descId;
-	}
-	public void setDescId(Integer descId) {
-		this.descId = descId;
-	}
-	public String getDescConvenio() {
-		return descConvenio;
-	}
-	public void setDescConvenio(String descConvenio) {
-		this.descConvenio = descConvenio;
-	}
-	public Integer getDescValor() {
-		return descValor;
-	}
-	public void setDescValor(Integer descValor) {
-		this.descValor = descValor;
 	}
 }

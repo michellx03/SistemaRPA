@@ -25,9 +25,6 @@ public class Medico implements Entity {
 	@Column(name="medi_crm")
 	private Integer mediCrm;
 
-	@Column(name="medi_desc_id")
-	private Integer mediDescId;
-
 	@Column(name="medi_especialidade")
 	private String mediEspecialidade;
 
@@ -59,14 +56,6 @@ public class Medico implements Entity {
 
 	public void setMediCrm(Integer mediCrm) {
 		this.mediCrm = mediCrm;
-	}
-
-	public Integer getMediDescId() {
-		return this.mediDescId;
-	}
-
-	public void setMediDescId(Integer mediDescId) {
-		this.mediDescId = mediDescId;
 	}
 
 	public String getMediEspecialidade() {

@@ -68,6 +68,10 @@
 		class="acessorestrito.angularrestspringsecurity.dao.descontos.JpaDescontosDao">
 	</bean>
 	
+	<bean id="convenioDao"
+		class="acessorestrito.angularrestspringsecurity.dao.convenio.JpaConvenioDao">
+	</bean>
+	
 	<bean id="referenciaDao"
 		class="acessorestrito.angularrestspringsecurity.dao.referencia.JpaReferenciaDao">
 	</bean>

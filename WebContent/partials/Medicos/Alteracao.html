@@ -73,30 +73,7 @@
 										type="text" class="form-control" name="name" />
 								</div>
 							</div>
-						</div>
-						
-						<div class="portlet-body">
-
-							<div class="form-group">
-								<label for="single" class="control-label col-md-3">Selecione
-									o desconto<span class="required"> * </span>
-								</label>
-								<div class="col-md-4">
-									<select id="single" class="form-control select2"
-										style="width: 307px">
-										<option value="">Selecione o desconto</option>
-
-										<option
-											ng-repeat="descontos in Descontos | orderBy:'descConvenio'"
-											ng-if="descontos.descId != Medicos.mediDescId"
-											value="{{descontos.descId}}">{{descontos.descConvenio}}</option>
-									</select>
-								</div>
-							</div>
-						</div>
-
-						
-						
+						</div>				
 					
 					<div class="form-actions">
 						<div class="row">

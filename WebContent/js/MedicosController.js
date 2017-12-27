@@ -50,13 +50,6 @@ function MedicosCadastroController($scope, $http, $location) {
 	}).success(function(data) {
 		$scope.Medicos = data;
 	});
-	
-	$http({
-		method : "GET",
-		url : '/AcessoRestrito/rest/descontos',
-	}).success(function(data) {
-		$scope.Descontos = data;
-	});
 
 	$scope.Cadastrar = function() {
 		
@@ -64,12 +57,10 @@ function MedicosCadastroController($scope, $http, $location) {
 		var crm = $scope.crm;
 		var especialidade = $scope.especialidade;
 		var cpf = $scope.cpf;
-		var mediDescId = $("#single option:selected").val();
 
 			var Medico = {
 				mediCpf : cpf,
 				mediCrm : crm,
-				mediDescId : mediDescId,
 				mediEspecialidade : especialidade,
 				mediNome : medico
 			}
@@ -114,9 +105,6 @@ function MedicoAlteracaoController($scope, $http, $routeParams, $location) {
 		$scope.especialidade = data.mediEspecialidade;
 		$scope.cpf = data.mediCpf;
 		
-		$('#single').append(
-				'<option selected="true" value="' + data.descId
-						+ '">' + data.descConvenio + ' </option> ');
 	});
 
 	$http({
@@ -132,15 +120,13 @@ function MedicoAlteracaoController($scope, $http, $routeParams, $location) {
 		var crm = $scope.crm;
 		var especialidade = $scope.especialidade;
 		var cpf = $scope.cpf;
-		var descontos = $("#single option:selected").val();
 
 			var Medico = {
 					mediId : $routeParams.id,
 					mediNome : medico,
 					mediCrm : crm,
 					mediEspecialidade : especialidade,
-					mediCpf : cpf,
-					mediDescId : descontos
+					mediCpf : cpf
 			}
 
 			$http({

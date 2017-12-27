@@ -31,6 +31,11 @@ angular
 								controller : ContaAtendimentoConsultaController,
 
 							});
+							$routeProvider.when('/ConvenioConsulta', {
+								templateUrl : 'partials/Convenio/Consulta.html',
+								controller : ConvenioConsultaController,
+
+							});
 							$routeProvider.when('/ContaFaturamentoConsulta', {
 								templateUrl : 'partials/ContaFaturamento/Consulta.html',
 								controller : ContaFaturamentoConsultaController,
@@ -127,6 +132,11 @@ angular
 								controller : MedicosCadastroController,
 
 							});
+							$routeProvider.when('/ConvenioCadastro', {
+								templateUrl : 'partials/Convenio/Cadastro.html',
+								controller : ConvenioCadastroController,
+
+							});
 							$routeProvider
 									.when(
 											'/ControleAcessoConsulta',
@@ -163,6 +173,11 @@ angular
 							$routeProvider.when('/AnoAlteracao/:id', {
 								templateUrl : 'partials/Ano/Alteracao.html',
 								controller : AnoAlteracaoController,
+
+							});
+							$routeProvider.when('/ConvenioAlteracao/:id', {
+								templateUrl : 'partials/Convenio/Alteracao.html',
+								controller : ConvenioAlteracaoController,
 
 							});
 							$routeProvider.when('/DescontosAlteracao/:id', {

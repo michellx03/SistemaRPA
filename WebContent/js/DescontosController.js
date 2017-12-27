@@ -94,8 +94,6 @@ function DescontosAlteracaoController($scope, $http, $routeParams, $location) {
 		var convenio = $scope.convenio;
 		var valor = $scope.valor;
 
-		if (convenio != "" && convenio != undefined) {
-
 			var Desconto = {
 				descId : $routeParams.id,
 				descConvenio : convenio,
@@ -111,8 +109,6 @@ function DescontosAlteracaoController($scope, $http, $routeParams, $location) {
 				$location.path("/DescontosConsulta");
 
 			});
-
-		}
 
 	}
 };
