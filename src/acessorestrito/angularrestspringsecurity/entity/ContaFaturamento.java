@@ -24,6 +24,9 @@ public class ContaFaturamento implements Entity {
 	@Column(name="cofa_data_atendimento")
 	private Date cofaDataAtendimento;
 
+	@Column(name="cofa_descricao_atendimento")
+	private String cofaDescricaoAtendimento;
+
 	@Column(name="cofa_matriculla")
 	private Integer cofaMatriculla;
 
@@ -39,8 +42,11 @@ public class ContaFaturamento implements Entity {
 	@Column(name="cofa_refe_id")
 	private Integer cofaRefeId;
 
+	@Column(name="cofa_status_pagamento")
+	private Integer cofaStatusPagamento;
+
 	@Column(name="cofa_tipo_atendimento")
-	private String cofaTipoAtendimento;
+	private Integer cofaTipoAtendimento;
 
 	@Column(name="cofa_valor")
 	private double cofaValor;
@@ -62,6 +68,14 @@ public class ContaFaturamento implements Entity {
 
 	public void setCofaDataAtendimento(Date cofaDataAtendimento) {
 		this.cofaDataAtendimento = cofaDataAtendimento;
+	}
+
+	public String getCofaDescricaoAtendimento() {
+		return this.cofaDescricaoAtendimento;
+	}
+
+	public void setCofaDescricaoAtendimento(String cofaDescricaoAtendimento) {
+		this.cofaDescricaoAtendimento = cofaDescricaoAtendimento;
 	}
 
 	public Integer getCofaMatriculla() {
@@ -104,11 +118,19 @@ public class ContaFaturamento implements Entity {
 		this.cofaRefeId = cofaRefeId;
 	}
 
-	public String getCofaTipoAtendimento() {
+	public Integer getCofaStatusPagamento() {
+		return this.cofaStatusPagamento;
+	}
+
+	public void setCofaStatusPagamento(Integer cofaStatusPagamento) {
+		this.cofaStatusPagamento = cofaStatusPagamento;
+	}
+
+	public Integer getCofaTipoAtendimento() {
 		return this.cofaTipoAtendimento;
 	}
 
-	public void setCofaTipoAtendimento(String cofaTipoAtendimento) {
+	public void setCofaTipoAtendimento(Integer cofaTipoAtendimento) {
 		this.cofaTipoAtendimento = cofaTipoAtendimento;
 	}
 

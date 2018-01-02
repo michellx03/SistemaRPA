@@ -15,7 +15,8 @@ function ContaFaturamentoConsultaController($scope, $http) {
 											"" + data[i].refe_referencia + "",
 											"" + data[i].cofa_data_atendimento+ "",
 											"" + data[i].cofa_numero_guia + "",
-											"" + data[i].cofa_tipo_atendimento + "",
+											"" + data[i].medi_nome + "",
+											"" + data[i].stpa_status + "",
 											'<div class="btn-group"><button class="btn btn-xs green dropdown-toggle" type="button"data-toggle="dropdown" aria-expanded="false">Ações <i class="fa fa-angle-down"></i></button><ul class="dropdown-menu" role="menu"><li><a href="#!/ContaFaturmanetoAlteracao/'
 													+ data[i].cofa_id
 													+ '"><i class="fa fa-edit"></i> Editar</a></li><li><a href="#'
@@ -35,7 +36,9 @@ function ContaFaturamentoConsultaController($scope, $http) {
 							}, {
 								title : "Guia"
 							}, {
-								title : "Tipo atendimento"
+								title : "Medico"
+							}, {
+								title : "Pago?"
 							}, {
 								title : "Ação"
 							}, ]
@@ -48,15 +51,40 @@ function ContaFaturamentoConsultaController($scope, $http) {
 function ContaFaturamentoAlteracaoController($scope, $http, $routeParams, $location) {
 	$scope.Conta;
 	$scope.Referencia = {};
+	$scope.Medicos = {};
+	$scope.StatusPagamento = {};
+	$scope.TipoAtendimento = {};
+	
+	$scope.descricao = false;
+	
+	$http({
+		method : "GET",
+		url : '/AcessoRestrito/rest/tipo_atendimento',
+	}).success(function(data) {
+		$scope.TipoAtendimento = data;
+	});
 	
 	$http({
 		method : "GET",
 		url : '/AcessoRestrito/rest/referencia',
 	}).success(function(data) {
 		$scope.Referencia = data;
-		
 	});
-
+	
+	$http({
+		method : "GET",
+		url : '/AcessoRestrito/rest/medicos',
+	}).success(function(data) {
+		$scope.Medicos = data;
+	});
+	
+	$http({
+		method : "GET",
+		url : '/AcessoRestrito/rest/status_pagamento',
+	}).success(function(data) {
+		$scope.StatusPagamento = data;
+	});
+	
 	$http({
 		method : "GET",
 		url : '/AcessoRestrito/rest/conta_faturamento/obterDadosId?id=' + $routeParams.id + '',
@@ -66,6 +94,21 @@ function ContaFaturamentoAlteracaoController($scope, $http, $routeParams, $locat
 		$scope.dataAtendimento = data.contaDataAtendimento;
 		
 		var referencia = data.refe_referencia == null?"Selecione uma opcao":data.refe_referencia;
+		var medico = data.medi_nome == null?"Selecione uma opcao":data.medi_nome;
+		var status = data.stpa_status == null?"Selecione uma opcao":data.stpa_status;
+		var tipoAtendimento = data.tiat_tipo == null?"Selecione uma opcao":data.tiat_tipo;
+		
+		$('#status').append(
+				'<option selected="true" value="' + data.cofa_status_pagamento
+						+ '">' + status+ ' </option> ');
+		
+		$('#atendimento').append(
+				'<option selected="true" value="' + data.cofa_tipo_atendimento
+						+ '">' + tipoAtendimento+ ' </option> ');
+		
+		$('#medico').append(
+				'<option selected="true" value="' + data.cofa_medico
+						+ '">' + medico + ' </option> ');
 		
 		$('#referencia').append(
 				'<option selected="true" value="' + data.cofa_refe_id
@@ -76,12 +119,14 @@ function ContaFaturamentoAlteracaoController($scope, $http, $routeParams, $locat
 		
 		var paciente = $("#paciente").val();
 		var numeroGuia = $("#numeroGuia").val();
-		var tipoAtendimento = $("#atendimento").val();
+		var tipoAtendimento = $("#atendimento option:selected").val();
 		var referencia = $("#referencia option:selected").val();
-		var medico = $("#medico").val();
+		var medico = $("#medico option:selected").val();
 		var matricula = $("#matricula").val();
 		var valor = $("#valor").val();
-		var dataAtendimento = $("#dataAtendimento").val();		
+		var dataAtendimento = $("#dataAtendimento").val();	
+		var status = $("#status option:selected").val();
+		var descricaoAtendimento = $("#descricaoAtendimento").val();
 
 			var ContaFaturamento = {
 				cofaId : $routeParams.id,
@@ -91,7 +136,9 @@ function ContaFaturamentoAlteracaoController($scope, $http, $routeParams, $locat
 				cofaRefeId : referencia,
 				cofaMedico : medico,
 				cofaMatriculla : matricula,
-				cofaValor : valor
+				cofaValor : valor,
+				cofaStatusPagamento : status,
+				cofaDescricaoAtendimento : descricaoAtendimento
 				
 			}
 			

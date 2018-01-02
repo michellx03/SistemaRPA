@@ -59,14 +59,29 @@
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-md-3">Tipo de atendimento
-								<span class="required"> * </span>
+							<label for="atendimento" class="control-label col-md-3">Tipo
+								Atendimento <span class="required"> * </span>
 							</label>
+
+							<div class="col-md-4">
+								<select id="atendimento" class="form-control select2"
+									style="width: 307px">
+									<option
+										ng-repeat="tipo in TipoAtendimento | orderBy:'tiatTipo' "
+										ng-if="tipo.tiatId != Conta.cofa_tipo_atendimento"
+										value="{{tipo.tiatId}}">{{tipo.tiatTipo}}</option>
+								</select>
+							</div>
+
+						</div>
+
+						<div class="form-group">
+							
 							<div class="col-md-4">
 								<div class="input-icon right">
-									<i class="fa"></i> <input ng-model="atendimento"
-										id="atendimento" type="text" class="form-control"
-										ng-value="Conta.cofa_tipo_atendimento" name="name" />
+									<i class="fa"></i> <input ng-model="descricaoAtendimento" ng-show="descricao"
+										id="descricaoAtendimento" type="text" class="form-control"
+										ng-value="Conta.cofa_descricao_atendimento" name="name" />
 								</div>
 							</div>
 						</div>
@@ -90,16 +105,19 @@
 						</div>
 
 						<div class="form-group">
-							<label class="control-label col-md-3">Medico <span
-								class="required"> * </span>
+							<label for="medico" class="control-label col-md-3">Medico
+								<span class="required"> * </span>
 							</label>
+
 							<div class="col-md-4">
-								<div class="input-icon right">
-									<i class="fa"></i> <input ng-model="medico" id="medico"
-										type="text" class="form-control" ng-value="Conta.cofa_medico"
-										name="name" />
-								</div>
+								<select id="medico" class="form-control select2"
+									style="width: 307px">
+									<option ng-repeat="medicos in Medicos | orderBy:'mediNome' "
+										ng-if="medicos.mediId != Conta.cofa_medico"
+										value="{{medicos.mediId}}">{{medicos.mediNome}}</option>
+								</select>
 							</div>
+
 						</div>
 
 						<div class="form-group">
@@ -109,12 +127,12 @@
 							<div class="col-md-4">
 								<div class="input-icon right">
 									<i class="fa"></i> <input ng-model="matricula" id="matricula"
-										type="text" class="form-control" ng-value="Conta.cofa_matriculla"
-										name="name" />
+										type="text" class="form-control"
+										ng-value="Conta.cofa_matriculla" name="name" />
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="form-group">
 							<label class="control-label col-md-3">Valor <span
 								class="required"> * </span>
@@ -151,6 +169,23 @@
 							</div>
 						</div>
 
+
+						<div class="form-group">
+							<label for="status" class="control-label col-md-3">Status
+								do pagamento <span class="required"> * </span>
+							</label>
+
+							<div class="col-md-4">
+								<select id="status" class="form-control select2"
+									style="width: 307px">
+									<option
+										ng-repeat="statusPagamento in StatusPagamento | orderBy:'stpaStatus' "
+										ng-if="statusPagamento.stpaId != Conta.cofa_status_pagamento"
+										value="{{statusPagamento.stpaId}}">{{statusPagamento.stpaStatus}}</option>
+								</select>
+							</div>
+
+						</div>
 
 						<div class="form-actions">
 							<div class="row">

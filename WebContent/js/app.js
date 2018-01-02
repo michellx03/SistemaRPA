@@ -26,6 +26,11 @@ angular
 								controller : DescontosConsultaController,
 
 							});
+							$routeProvider.when('/TipoAtendimentoConsulta', {
+								templateUrl : 'partials/TipoAtendimento/Consulta.html',
+								controller : TipoAtendimentoConsultaController,
+
+							});
 							$routeProvider.when('/ContaAtendimentoConsulta', {
 								templateUrl : 'partials/ContaAtendimento/Consulta.html',
 								controller : ContaAtendimentoConsultaController,
@@ -54,6 +59,11 @@ angular
 							$routeProvider.when('/ContaAlteracao/:id', {
 								templateUrl : 'partials/ContaAtendimento/Alteracao.html',
 								controller : ContaAtendimentoAlteracaoController,
+
+							});
+							$routeProvider.when('/TipoAtendimentoAlteracao/:id', {
+								templateUrl : 'partials/TipoAtendimento/Alteracao.html',
+								controller : TipoAtendimentoAlteracaoController,
 
 							});
 							$routeProvider.when('/ContaFaturmanetoAlteracao/:id', {
